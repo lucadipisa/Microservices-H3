@@ -3,7 +3,6 @@ import pymysql
 
 # Vérification de la santé des conteneurs Docker
 def test_sante_conteneurs():
-    # Nom des conteneurs à vérifier (remplacez-les par les noms réels de vos conteneurs)
     conteneurs = ["monappflask", "monappsql"]
 
     for conteneur in conteneurs:
@@ -17,7 +16,6 @@ def test_sante_conteneurs():
 
 # Vérification du bon fonctionnement de l'application Flask
 def test_bon_fonctionnement_application():
-    # Insérez ici le code pour vérifier le bon fonctionnement de l'application Flask
     url = "http://adresse-du-serveur:5000/fruits"
     response = requests.get(url)
     if response.status_code == 200:
@@ -27,7 +25,6 @@ def test_bon_fonctionnement_application():
 
 # Vérification du bon fonctionnement de la base de données MySQL
 def test_bon_fonctionnement_base_de_donnees():
-    # Insérez ici le code pour vérifier le bon fonctionnement de la base de données MySQL
     connection = pymysql.connect(host='adresse-du-serveur', user='user', password='user', db='sampledb')
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM fruits")
