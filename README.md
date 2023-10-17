@@ -15,12 +15,8 @@ Communication entre Flask et MySQL : Utilisation du protocole TCP/IP pour l'éch
 Communication entre le client et Flask : Utilisation du protocole HTTP/HTTPS pour accéder à l'application via un navigateur web. Les méthodes HTTP GET et POST sont utilisées pour récupérer des données depuis le serveur ou soumettre des données au serveur.
 Les ports exposés sont les suivants :
 
-Côté Client :
-
-Flask expose le port 5000 pour que les clients accèdent à l'application via un navigateur web.
-Côté Backend :
-
-MySQL expose le port 3306 pour les connexions internes entre Flask et la base de données.
+Côté Client : Flask expose le port 5000 pour que les clients accèdent à l'application via un navigateur web.
+Côté Backend : MySQL expose le port 3306 pour les connexions internes entre Flask et la base de données.
 MySQL expose également le port 3307 côté client pour des connexions externes, bien que cela nécessite une configuration de sécurité appropriée.
 
 # Technologies Utilisées
