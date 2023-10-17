@@ -31,3 +31,10 @@ Docker Compose : Pour la gestion multi-conteneur du projet.
 HTML/CSS : Pour la création de la page web et de son style.
 Python : Pour la logique applicative et la manipulation des données.
 
+# Image Docker sur Docker Hub
+
+- Exécution de la commande docker tag myappsql axos15/myappsql afin de la tag avec mon nom utilisateur Docker
+- Exécution de la commande docker push axos15/myappsql afin de pousser l'image sur le Hub
+![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/e75678c5-dc6e-4405-9761-82ff7efe1a58)
+![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/4aab4e9b-88f6-4459-93b0-5002e04e4d18)
+
