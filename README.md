@@ -4,6 +4,7 @@ Ce projet consiste en une application web simple qui affiche une liste de fruits
 
 # Architecture
 L'architecture du projet est la suivante :
+
 ![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/91851694-b235-4b90-9c7b-3e2419bd60d1)
 
 Flask : Le composant principal qui gère les requêtes HTTP et affiche les données à l'utilisateur.
