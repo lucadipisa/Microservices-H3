@@ -30,4 +30,4 @@ Docker : Pour l'orchestration et la mise en conteneurs des services Flask et MyS
 Docker Compose : Pour la gestion multi-conteneur du projet.
 HTML/CSS : Pour la création de la page web et de son style.
 Python : Pour la logique applicative et la manipulation des données.
-Ce projet vise à servir d'exemple de base pour la création d'applications web simples utilisant Flask et MySQL. Vous pouvez cloner le projet, suivre les étapes de configuration et d'exécution décrites dans le README, et l'adapter selon vos besoins.
+
