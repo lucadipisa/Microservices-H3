@@ -1,23 +1,25 @@
 version: "3.9"
 services:
 
+  # Service web (Flask) :
   web:
-    build: ./flask/
-    image: flask_image
+    build: ./flask/       # Spécifie le chemin du répertoire contenant les fichiers Docker pour Flask
+    image: flask_image    # Nom de l'image Docker pour Flask
     ports:
-      - "5000:5000"
+      - "5000:5000"       # Mappage des ports (port externe : port interne)
     depends_on:
-      - mysql
+      - mysql             # Dépendance envers le service MySQL
 
+  # Service MySQL :
   mysql:
-    build: ./mysql/
-    image: mysql:latest
-    restart: always
+    build: ./mysql/       # Spécifie le chemin du répertoire contenant les fichiers Docker pour MySQL
+    image: mysql:latest   # Utilise l'image Docker MySQL la plus récente
+    restart: always      # Redémarrer le service en cas de panne
     ports:
-      - "3307:3306"
+      - "3307:3306"       # Mappage des ports (port externe : port interne)
     volumes:
-      - ./mysql:/docker-entrypoint-initdb.d/:ro
+      - ./mysql:/docker-entrypoint-initdb.d/:ro  # Montage d'un volume pour initialiser la base de données MySQL
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: root     # Mot de passe de l'utilisateur root MySQL
+      MYSQL_USER: user              # Nom d'utilisateur pour la base de données
+      MYSQL_PASSWORD: user          # Mot de passe pour l'utilisateur de la base de données
