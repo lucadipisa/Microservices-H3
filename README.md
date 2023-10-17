@@ -23,7 +23,7 @@ Côté Backend :
 MySQL expose le port 3306 pour les connexions internes entre Flask et la base de données.
 MySQL expose également le port 3307 côté client pour des connexions externes, bien que cela nécessite une configuration de sécurité appropriée.
 
-#Technologies Utilisées
+# Technologies Utilisées
 Flask : Framework web Python pour la création de l'interface utilisateur.
 MySQL : Système de gestion de base de données relationnelles.
 Docker : Pour l'orchestration et la mise en conteneurs des services Flask et MySQL.
