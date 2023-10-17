@@ -11,7 +11,7 @@ Flask : Le composant principal qui gère les requêtes HTTP et affiche les donn�
 MySQL : La base de données qui stocke les informations sur les fruits, notamment leur nom, couleur et prix.
 Les communications se font via les protocoles suivants :
 
-Communication entre Flask et MySQL : Utilisation du protocole TCP/IP pour l'échange de requêtes SQL, principalement SELECT, INSERT, UPDATE, et DELETE, pour interagir avec la base de données.
+Communication entre Flask et MySQL : Utilisation du protocole TCP/IP pour l'échange de requêtes SQL, principalement SELECT et CREATE pour interagir avec la base de données.
 Communication entre le client et Flask : Utilisation du protocole HTTP/HTTPS pour accéder à l'application via un navigateur web. Les méthodes HTTP GET et POST sont utilisées pour récupérer des données depuis le serveur ou soumettre des données au serveur.
 Les ports exposés sont les suivants :
 
