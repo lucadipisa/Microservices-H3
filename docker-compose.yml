@@ -14,9 +14,9 @@ services:
       - FLASK_APP=app:app
       - FLASK_RUN_CERT=cert.pem
       - FLASK_RUN_KEY=key.pem
-    command: ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+    command: ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]  # Corrigez l'indentation ici
 
-   mysql:
+  mysql:
     build: ./mysql/
     image: mysql:latest
     restart: always
@@ -27,4 +27,4 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: user
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: user
