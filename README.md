@@ -1,11 +1,13 @@
 # Microservices
-Projet d'Exemple : Liste de Fruits
+Projet Microservices : Liste de Fruits
+
 Ce projet consiste en une application web simple qui affiche une liste de fruits depuis une base de données MySQL. L'objectif principal est de démontrer l'utilisation de Flask pour créer une interface utilisateur et d'utiliser MySQL pour stocker et récupérer les données.
 
 # Architecture
 L'architecture du projet est la suivante :
 
-![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/91851694-b235-4b90-9c7b-3e2419bd60d1)
+![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/15d378dc-5c32-460c-8464-5552d0cf4aef)
+
 
 Flask : Le composant principal qui gère les requêtes HTTP et affiche les données à l'utilisateur.
 MySQL : La base de données qui stocke les informations sur les fruits, notamment leur nom, couleur et prix.
@@ -21,17 +23,25 @@ Côté Backend : MySQL expose le port 3306 pour les connexions internes entre Fl
 MySQL expose également le port 3307 côté client pour des connexions externes, bien que cela nécessite une configuration de sécurité appropriée.
 
 # Technologies Utilisées
-Flask : Framework web Python pour la création de l'interface utilisateur.
-MySQL : Système de gestion de base de données relationnelles.
-Docker : Pour l'orchestration et la mise en conteneurs des services Flask et MySQL.
-Docker Compose : Pour la gestion multi-conteneur du projet.
-HTML/CSS : Pour la création de la page web et de son style.
-Python : Pour la logique applicative et la manipulation des données.
+- Flask : Framework web Python pour la création de l'interface utilisateur, choisi pour sa simplicité et rapidité de mise en oeuvre.
+- MySQL : Système de gestion de base de données relationnelles, parfaite pour ma liste de fruits.
+- Docker : Pour l'orchestration et la mise en conteneurs des services Flask et MySQL.
+- Docker Compose : Pour la gestion multi-conteneur du projet.
+- HTML/CSS : Pour la création de la page web et de son style en passant par un template. 
+- Python : Pour la logique applicative et la manipulation des données.
 
 # Image Docker sur Docker Hub
+Exécution de la commande  afin de la tag avec mon nom utilisateur Docker
+ ```bash
+  docker tag myappsql axos15/monappsql
+```
 
-- Exécution de la commande docker tag myappsql axos15/myappsql afin de la tag avec mon nom utilisateur Docker
-- Exécution de la commande docker push axos15/myappsql afin de pousser l'image sur le Hub
-![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/e75678c5-dc6e-4405-9761-82ff7efe1a58)
+![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/e75678c5-dc6e-4405-9761-82ff7efe1a58).
+
+Exécution de la commande  afin de pousser l'image sur le Hub
+ ```bash
+  docker push axos15/monappsql
+```
+
 ![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/4aab4e9b-88f6-4459-93b0-5002e04e4d18)
 
