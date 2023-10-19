@@ -1,30 +1,31 @@
-version: "3.9"
+version: "3.9"  # Spécifie la version de la syntaxe Docker Compose utilisée.
+
 services:
   web:
-    build: ./flask/
-    image: flask_image
+    build: ./flask/  # Utilise le Dockerfile situé dans le répertoire "./flask/" pour construire l'image du service "web".
+    image: flask_image  # Donne un nom à l'image créée pour ce service.
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Mappe le port 5000 du conteneur sur le port 5000 de l'hôte.
     depends_on:
-      - mysql
+      - mysql  # Indique que ce service dépend du service "mysql" et attend que celui-ci soit opérationnel avant de démarrer.
     volumes:
-      - ./flask:/app
+      - ./flask:/app  # Montre le répertoire local "./flask/" dans le répertoire "/app" du conteneur.
     environment:
-      - FLASK_ENV=production
-      - FLASK_APP=app:app
-      - FLASK_RUN_CERT=cert.pem
-      - FLASK_RUN_KEY=key.pem
-    command: ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]  # Corrigez l'indentation ici
+      - FLASK_ENV=production  # Définit la variable d'environnement FLASK_ENV à "production".
+      - FLASK_APP=app:app  # Définit la variable d'environnement FLASK_APP à "app:app".
+      - FLASK_RUN_CERT=cert.pem  # Définit la variable d'environnement FLASK_RUN_CERT à "cert.pem".
+      - FLASK_RUN_KEY=key.pem  # Définit la variable d'environnement FLASK_RUN_KEY à "key.pem".
+    command: ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]  # Définit la commande à exécuter pour démarrer ce service.
 
   mysql:
-    build: ./mysql/
-    image: mysql:latest
-    restart: always
+    build: ./mysql/  # Utilise le Dockerfile situé dans le répertoire "./mysql/" pour construire l'image du service "mysql".
+    image: mysql:latest  # Utilise l'image MySQL la plus récente disponible.
+    restart: always  # Indique que le service doit être redémarré automatiquement en cas d'échec.
     ports:
-      - "3307:3306"
+      - "3307:3306"  # Mappe le port 3306 du conteneur sur le port 3307 de l'hôte.
     volumes:
-      - ./mysql:/docker-entrypoint-initdb.d/:ro
+      - ./mysql:/docker-entrypoint-initdb.d/:ro  # Montre le répertoire local "./mysql/" dans le répertoire "/docker-entrypoint-initdb.d/" du conteneur en mode lecture seule.
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_USER: user  
+      MYSQL_PASSWORD: user 
