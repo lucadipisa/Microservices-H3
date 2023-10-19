@@ -46,7 +46,7 @@ Exécution de la commande  afin de pousser l'image sur le Hub
 
 ![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/064103b6-39b6-408e-ba35-7d3a02df39aa)
 
-# Axes d'amélioration futures
+# Axes d'améliorations futures
 
 - Déploiement sur Azure (AKS et Azure SQL Database pour la BDD)
 - Utilisation d'Azure Key Vault pour stocker tous les secrets (Ids BDD, SSL keys...)
