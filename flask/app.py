@@ -3,15 +3,15 @@ from flask_mysqldb import MySQL
 from flask_sslify import SSLify
 
 app = Flask(__name__)
-
 if __name__ == "__main__":
-# Activate HTTPS redirection
-sslify = SSLify(app)
-app.config['MYSQL_USER'] = 'user'  # set the MySQL user
-app.config['MYSQL_PASSWORD'] = 'root'  # set the MySQL password
-app.config['MYSQL_HOST'] = 'mysql'  # set the MySQL host
-app.config['MYSQL_DB'] = 'sampledb'  # set the MySQL database name
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # set the MySQL cursor class
+    # Activate HTTPS redirection
+    sslify = SSLify(app)
+    app.config['MYSQL_USER'] = 'user'  # set the MySQL user
+    app.config['MYSQL_PASSWORD'] = 'root'  # set the MySQL password
+    app.config['MYSQL_HOST'] = 'mysql'  # set the MySQL host
+    app.config['MYSQL_DB'] = 'sampledb'  # set the MySQL database name
+    app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # set the MySQL cursor class
+
 
 mysql = MySQL(app)  # create a new instance of the MySQL object using the Flask app
 
