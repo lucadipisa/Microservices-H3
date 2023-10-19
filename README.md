@@ -44,5 +44,5 @@ Exécution de la commande  afin de pousser l'image sur le Hub
   docker push axos15/monappsql
 ```
 
-![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/4aab4e9b-88f6-4459-93b0-5002e04e4d18)
+![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/064103b6-39b6-408e-ba35-7d3a02df39aa)
 
