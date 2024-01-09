@@ -7,7 +7,10 @@ Ce projet consiste en une application web simple qui affiche une liste de fruits
 L'architecture du projet est la suivante :
 ![image](https://github.com/lucadipisa/Microservices-H3/assets/113420670/5f73454b-8fd9-4b5c-86a0-fc473b93f1ca)
 
-
+# How to
+ ```bash
+docker-compose up -d --build
+```
 
 
 **Flask** : Le composant principal qui gère les requêtes HTTP et affiche les données à l'utilisateur.
